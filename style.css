@@ -1,0 +1,77 @@
+* { box-sizing: border-box; }
+:root {
+  --ink: #354d40;
+  --muted: #777d70;
+  --paper: #f7f4ec;
+  --card: #fffefa;
+  --line: #e8dfcf;
+  --sage: #788e79;
+  --rose: #b97970;
+  --gold: #b89962;
+}
+html { min-height: 100%; background: var(--paper); }
+body {
+  margin: 0; color: var(--ink); font-family: "Be Vietnam Pro", sans-serif;
+  background:
+    radial-gradient(ellipse at 4% 15%, rgba(209, 222, 204, .62), transparent 28rem),
+    radial-gradient(ellipse at 96% 28%, rgba(238, 214, 203, .55), transparent 30rem),
+    repeating-linear-gradient(0deg, transparent 0 39px, rgba(160, 148, 121, .035) 40px),
+    var(--paper);
+}
+.page-shell { width: min(100% - 36px, 1080px); margin: 0 auto; }
+.celebration { text-align: center; position: relative; padding: 48px 12px 25px; overflow: hidden; }
+.topline { display: flex; align-items: center; justify-content: center; gap: 12px; color: #a4865d; font-size: 10px; font-weight: 700; letter-spacing: .27em; }
+.topline span { height: 1px; width: 35px; background: #cdbb9b; }
+.school-art { height: 126px; width: 220px; margin: 13px auto 4px; position: relative; }
+.sun { position: absolute; width: 74px; height: 74px; border-radius: 50%; background: #e9d9b9; opacity: .72; top: 7px; left: 73px; }
+.book { position: absolute; width: 154px; height: 75px; left: 33px; bottom: 5px; filter: drop-shadow(0 8px 6px rgba(70, 74, 55, .10)); }
+.book-page { position: absolute; bottom: 0; width: 76px; height: 57px; background: #fffdf6; border: 1px solid #d7c9ad; }
+.left-page { left: 0; border-radius: 8px 3px 3px 5px; transform: skewY(7deg); }
+.right-page { right: 0; border-radius: 3px 8px 5px 3px; transform: skewY(-7deg); }
+.book-page:after { content: ""; position: absolute; left: 13px; right: 13px; top: 18px; height: 22px; border-top: 1px solid #d8cbb5; border-bottom: 1px solid #d8cbb5; opacity: .8; }
+.book-spine { position: absolute; z-index: 2; width: 5px; height: 58px; left: 75px; bottom: 0; background: #b77e70; border-radius: 4px; }
+.sprig { position: absolute; color: #9aab8e; font-size: 29px; }
+.sprig-left { left: 7px; top: 50px; transform: rotate(-20deg); }
+.sprig-right { right: 8px; top: 42px; color: #c28c81; }
+.welcome { margin: 13px 0 8px; color: #a27e65; font-size: 10px; font-weight: 700; letter-spacing: .22em; }
+h1 { margin: 0; font: 600 clamp(38px, 6vw, 65px)/1.12 "Playfair Display", Georgia, serif; letter-spacing: -.035em; color: #405b48; }
+h1 em { color: var(--rose); font-weight: 500; }
+.date-ribbon { display: flex; align-items: center; justify-content: center; gap: 12px; margin: 16px 0 12px; color: #9b805d; font-size: 12px; font-weight: 700; letter-spacing: .16em; }
+.date-ribbon i { width: 4px; height: 4px; background: #c18b7d; border-radius: 50%; }
+.subtitle { color: var(--muted); font-size: 13px; line-height: 1.85; margin: 0; }
+.ornament { margin: 19px auto 0; color: #b48d73; font-size: 18px; }
+.ornament span { display: inline-block; width: 48px; height: 1px; vertical-align: middle; background: var(--line); margin: 0 9px; }
+main { padding: 12px 0 48px; }
+.section-heading { text-align: center; margin: 4px 0 24px; }
+.small-star { color: #bd927d; font-size: 19px; }
+.section-heading h2 { margin: 5px 0 6px; font: 600 clamp(23px, 3vw, 30px) "Playfair Display", Georgia, serif; color: #526b56; }
+.section-heading p { margin: 0; color: #8a887d; font-size: 12px; }
+.wish-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+.wish-card {
+  position: relative; min-height: 142px; padding: 28px 28px 25px;
+  display: flex; align-items: center; justify-content: center; text-align: center;
+  background: rgba(255,254,250,.94); border: 1px solid #e9e1d3;
+  border-radius: 13px 13px 13px 4px;
+  box-shadow: 0 8px 22px rgba(71, 78, 59, .055);
+  animation: rise .55s ease both;
+}
+.wish-card:before { content: "“"; position: absolute; top: 7px; left: 16px; color: #c99788; font: 39px/1 "Playfair Display", Georgia, serif; }
+.wish-card:after { content: "✧"; position: absolute; right: 14px; bottom: 8px; color: #b5a37d; font-size: 13px; }
+.wish-card p { margin: 0; color: #536657; font-size: 14px; line-height: 1.85; font-weight: 500; }
+.status { grid-column: 1 / -1; text-align: center; padding: 28px; color: var(--muted); }
+.wish-count { margin: 22px 0 0; text-align: center; color: #a69b88; font-size: 10px; letter-spacing: .18em; }
+footer { text-align: center; padding: 24px 12px 38px; border-top: 1px solid var(--line); }
+.footer-rule { color: #b98979; font-size: 18px; }
+.footer-rule:before, .footer-rule:after { content: ""; display: inline-block; width: 55px; height: 1px; vertical-align: middle; background: var(--line); margin: 0 10px; }
+.footer-title { margin: 7px 0 5px; color: #526b56; font: 600 20px "Playfair Display", Georgia, serif; }
+.footer-note { margin: 0; color: #8a887d; font-size: 11px; line-height: 1.7; }
+.footer-date { margin-top: 17px; color: #b09470; font-size: 9px; font-weight: 700; letter-spacing: .2em; }
+@keyframes rise { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+@media (max-width: 650px) {
+  .celebration { padding-top: 35px; }
+  .school-art { transform: scale(.88); margin-top: 7px; margin-bottom: -1px; }
+  .wish-grid { grid-template-columns: 1fr; gap: 12px; }
+  .wish-card { min-height: 118px; padding: 25px 24px; }
+  .wish-card p { font-size: 13px; }
+  .desktop-only { display: none; }
+}
